@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+	   
+      <meta charset="utf-8">
+	  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+      <title>Builded Resume</title>
+    </head>
+	<style>
+		*{
+padding:0;
+margin:0;
+box-sizing:border-box;
+
+}
+html{color:#222;
+font-family:'Josefin Sans';
+line-height:1.5;
+} 
+body{
+	padding:4rem 5rem;
+	
+	background:linear-gradient(#00ccff,#00ccff 50%,#ff6a1a 50%,#ff6a1a);
+}
+h1{
+	font-size:2rem;
+	text-transform:uppercase;
+	
+}
+h2{font-size:1.1rem;
+	text-transform:uppercase;
+	border-top:1px solid #888;
+	border-bottom:1px solid #888;
+	padding:0.75rem 0;
+	margin-bottom:2rem;
+	}
+h3{font-size:1rem;
+text-transform:uppercase;
+color:salmon;
+margin-bottom:1rem;
+}
+p{
+	line-height:1.5;
+}
+section +section{
+	margin-top:2rem;
+}
+a{
+	text-decoration:none;
+	color:inherit;
+	
+}
+ul{
+	list-style:none;
+}
+
+
+.profile{
+text-align:center;
+}
+
+.profile img{
+	border-radius:9999px;
+	width:15rem;
+	height:15rem;
+}
+.profile p{
+	color:#888;
+	margin-bottom:1rem;
+	font-size:1.5rem;
+}
+.contact ul{
+margin-top:-2rem;
+}
+
+.contact li{
+	text-align:right;
+	text-transform:uppercase;
+	padding:1rem; 
+	color:#888;
+	border-bottom:1px solid #888;
+	font-size:0.8rem;
+	
+}
+.skills >ul{
+	display:grid;
+	grid-template-columns:2fr 1fr;
+	grid-gap:1rem;
+	
+}
+.timeline .event+.event{
+	margin-top:1rem;
+}
+
+.event{
+	display:grid;
+	grid-template-columns:5ch 1fr;
+}
+.content{
+	border-left:1px solid #888;
+	padding-left:1rem;
+	margin-left:1rem;
+}
+.content > h3+p{
+	margin-bottom:1rem;
+	color:#333;
+}
+
+.resume_page{
+	display:grid;
+	/* display:block for mobile view */
+	grid-template-columns:40% 1fr;
+	grid-gap:4rem;
+	background-color:white; 
+	padding:3rem;
+	
+	max-width:1000px;
+	margin:auto;
+}
+</style>
+    <body>
+	
+	<div class="resume_page">
+		<div class="column">
+			<section class="objective">
+				<h2>CAREER OBJECTIVE</h2>
+				<p> {{ obj }}</p>
+			</section>
+			<section class="education">
+			  <h2>Education</h2>
+				<ul class="timeline">
+					<li class="event">
+						<span class="duration">{{ year1 }}</span>
+						<div class="content">
+						<h3>Enter Your college</h3>
+						 <p><em>{{ col }}</em></p>
+						 <p>{{ branch }}</p>
+						 <p>Percentage:{{ per1 }}%</p></div>
+					</li>
+					<li class="event">
+						<span class="duration">{{ year2 }}</span>
+						<div class="content">
+						<h3>Enter Your college</h3>
+						 <p><em>{{ col2 }}</em></p>
+						 
+						 <p>Percentage:{{ per2 }}%</p></div>
+					</li>
+					<li class="event">
+						<span class="duration">{{ year3 }}</span>
+						<div class="content">
+						<h3>Enter Your school</h3>
+						 <p><em>{{ sch }}</em></p>
+						 
+						 <p>Percentage:{{ per3 }}%</p></div>
+					</li>
+				</ul>
+			</section>
+			<section class="experience">
+			  <h2>Work Experience</h2>
+				<ul class="timeline">
+					<li class="event">
+					<span class="duration">{{ exp_dur1 }}</span>
+					<div class="content">
+							<h2>{{ comp }}</h2>
+							<p>{{ exp }}</p>	
+					</div>
+					
+				</ul>
+			  </section>
+			<section class="certification">
+			  <h2>Certifications</h2>
+				<ul class="timeline">
+					<li class="event">
+					<span class="duration">{{ dur1 }}</span>
+					<div class="content">
+							<p>{{ cer1 }}</p>	
+					</div>
+					
+				</ul>
+				<ul class="timeline">
+					<li class="event">
+					<span class="duration">{{ dur2 }}</span>
+					<div class="content">
+							<p>{{ cer2 }}</p>	
+					</div>
+					
+				</ul>
+			  </section>
+			
+
+			<section class="skills">
+				<h2>Capabilities</h2>
+				 <ul>
+					<li><h3>Professional</h3>
+						<ul>
+							<li>{{ prof1 }}</li>
+							<li>{{ prof2 }}</li>
+							<li>{{ prof3 }}</li>
+						</ul>
+					<li><h3>Personal</h3>
+						<ul>
+							<li>{{ pers1 }}</li>
+							<li>{{ pers2 }}</li>
+							<li>{{ pers3 }}</li>
+						</ul>
+			</section>
+			<section class="hobbies">
+				<h2>hobbies</h2>
+				<ul>
+					<li>{{ hob1 }}</li>
+					<li>{{ hob2 }}</li>
+					<li>{{ hob3 }}</li>
+					
+			</section>
+	  
+		</div>
+		<div class="column">
+			<section class="profile">
+				<h1>{{ name }}</h1>
+				<h3><em>{{ role }}</em></h3>
+			<img src={{ user_image }} alt="">
+			</section>
+			<section class="projects">
+				
+			  <h2>MINI PROJECTS</h2>
+				<ul class="timeline">
+					<li class="event">
+						<span class="duration">{{ proj_dur1 }}</span>
+						<div class="content">
+						<h3>Enter Your PROJECT NAME</h3>
+						 <p><em>{{ proj_name1 }}</em></p>
+						 <p> {{ lang1 }}</p>
+						</div>
+					</li>
+					<li class="event">
+						<span class="duration">{{ proj_dur2 }}</span>
+						<div class="content">
+						<h3>Enter uour PROJECT NAME</h3>
+						 <p><em>{{ proj_name2 }}</em></p>
+						 <p>{{ lang2 }}</p>
+						</div>
+					</li>
+				</ul>
+			</section>
+			<section class="workshop">
+			  <h2>Workshops attended:</h2>
+				<ul class="timeline">
+					<li class="event">
+					<span class="duration">{{ work_dur1 }}</span>
+					<div class="content">
+							<p>{{ desc_work1 }}</p>	
+					</div>
+					
+				</ul>
+			  </section>
+			<section class="contact">
+			<h2>Contact</h2>
+			<ul>
+				<li>{{ address }}</li>
+				<li><a href="mailto:{{ gmail }}">{{ gmail }}</a></li>
+				<li>{{ git_link }}</li>
+				<li>{{ linked_in }}</li>
+				
+				<li><a href="tel:+91{{ num }}">(+91) {{ num }}</a></li>
+			
+			</ul>
+			</section >
+			
+			<section class="socials">
+			<ul>
+				<li>github</li>
+				<li>linkedin</li>
+				
+			</section>
+		</div>
+	  
+    </body>
+</html>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

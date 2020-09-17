@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <title>Enter Details</title>
+      <style>
+        form {
+          width: 420px;
+        }
+		body{
+			background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+			}
+        div {
+          margin-bottom: 20px;
+        }
+
+        label {
+          display: inline-block;
+          width: 240px;
+          text-align: right;
+          padding-right: 1px;
+		  text-transform:uppercase;
+        }
+
+        button, input {
+          float: right;
+        }
+		.resume{
+			grid-gap:4rem;
+		background-color:#f6ebf7; 
+		padding:3rem;
+	
+		max-width:1000px;
+		margin:auto;
+	}
+      </style>
+    </head>
+    <body>
+	<section class="resume">
+      <form method="post" action="{{ url_for('RESUME') }}">
+        <div>
+          <label for="name">Enter your full name :</label>
+          <input name="name" id="name" >
+        </div>
+        <div>
+          <label for="role">Enter your role :</label>
+          <input name="role" id="role" >
+        </div>
+		<div>
+          <label for="obj">Enter your career objective :</label>
+          <input name="obj" id="obj" >
+        </div>
+		<div>
+          <label for="col">Enter your college name :</label>
+          <input name="col" id="col" >
+        </div>
+		<div>
+          <label for="branch">Enter your branch :</label>
+          <input name="branch" id="branch" >
+        </div>
+		<div>
+          <label for="year1">Enter your Graduation year :</label>
+          <input name="year1" id="year1" >
+        </div>
+		<div>
+          <label for="per1">Enter your percentage :</label>
+          <input name="per1" id="per1" >
+        </div>
+		<div>
+          <label for="col2">Enter your college name :</label>
+          <input name="col2" id="col2" >
+        </div>
+		<div>
+          <label for="stream">Enter your stream :</label>
+          <input name="stream" id="stream" >
+        </div>
+		<div>
+          <label for="year2">Enter your intermediate year :</label>
+          <input name="year2" id="year2" >
+        </div>
+		<div>
+          <label for="per2">Enter your percentage :</label>
+          <input name="per2" id="per2" >
+        </div>
+		<div>
+          <label for="sch">Enter your school name :</label>
+          <input name="sch" id="sch" >
+        </div>
+		
+		<div>
+          <label for="year3">Enter your schooling year :</label>
+          <input name="year3" id="year3" >
+        </div>
+		<div>
+          <label for="per3">Enter your percentage :</label>
+          <input name="per3" id="per3" >
+        </div>
+		<div>
+          <label for="comp">Enter internship company name :</label>
+          <input name="comp" id="comp" >
+        </div>
+		<div>
+          <label for="exp">Enter your experience :</label>
+          <input name="exp" id="exp" >
+        </div>
+		<div>
+          <label for="exp_dur1">Enter your internship duration :</label>
+          <input name="exp_dur1" id="exp_dur1" >
+        </div>
+		
+		<div>
+          <label for="cer1">Enter your certifications :</label>
+          <input name="cer1" id="cer1" >
+        </div>
+		<div>
+          <label for="dur1">Enter your certification time :</label>
+          <input name="dur1" id="dur1" >
+        </div>
+		<div>
+          <label for="cer2">Enter your certifications :</label>
+          <input name="cer2" id="cer2" >
+        </div>
+		<div>
+          <label for="dur2">Enter your certification time :</label>
+          <input name="dur2" id="dur2" >
+        </div>
+		<div>
+          <label for="prof1">Enter your professional skill 1:</label>
+          <input name="prof1" id="prof1" >
+        </div>
+		<div>
+          <label for="prof2">Enter your professional skill 2:</label>
+          <input name="prof2" id="prof2" >
+        </div>
+		<div>
+          <label for="prof3">Enter your professional skill 3:</label>
+          <input name="prof3" id="prof3" >
+        </div>
+		<div>
+          <label for="pers1">Enter your personal skill 1:</label>
+          <input name="pers1" id="prof1" >
+        </div>
+		<div>
+          <label for="pers2">Enter your personal skill 2:</label>
+          <input name="pers2" id="pers2" >
+        </div>
+		<div>
+          <label for="pers3">Enter your personal skill 3:</label>
+          <input name="pers3" id="pers3" >
+        </div>
+		<div>
+          <label for="hob1">Enter your hobby 1:</label>
+          <input name="hob1" id="hob1" >
+        </div>
+		<div>
+          <label for="hob2">Enter your hobby 2:</label>
+          <input name="hob2" id="hob2" >
+        </div>
+		<div>
+          <label for="hob3">Enter your hobby 3:</label>
+          <input name="hob3" id="hob3" >
+        </div>
+		<div>
+          <label for="proj_dur1">Enter your project-1 duration:</label>
+          <input name="proj_dur1" id="proj_dur1" >
+        </div>
+		<div>
+          <label for="proj_name1">Enter your project-1 name:</label>
+          <input name="proj_name1" id="proj_name1" >
+        </div>
+		<div>
+          <label for="lang1">Enter languages used:</label>
+          <input name="lang1" id="lang1" >
+        </div>
+		<div>
+          <label for="proj_dur2">Enter your project-2 duration:</label>
+          <input name="proj_dur2" id="proj_dur2" >
+        </div>
+		<div>
+          <label for="proj_name2">Enter your project-2 name:</label>
+          <input name="proj_name2" id="proj_name2" >
+        </div>
+		<div>
+          <label for="lang2">Enter languages used:</label>
+          <input name="lang2" id="lang2" >
+        </div>
+		<div>
+          <label for="work_dur1">Enter workhop duration:</label>
+          <input name="work_dur1" id="work_dur1" >
+        </div>
+		<div>
+          <label for="desc_work1">Enter description about workshop:</label>
+          <input name="desc_work1" id="desc_work1" >
+        </div>
+		<div>
+          <label for="address">Enter Address:</label>
+          <input name="address" id="address" >
+        </div>
+		<div>
+          <label for="gmail">Enter gmail:</label>
+          <input name="gmail" id="gmail" >
+        </div>
+		<div>
+          <label for="git_link">Enter github link:</label>
+          <input name="git_link" id="git_link" >
+        </div>
+		<div>
+          <label for="linked_in">Enter linked_in link:</label>
+          <input name="linked_in" id="linked_in" >
+        </div>
+		<div>
+          <label for="num">Enter mobile number:</label>
+          <input name="num" id="num" >
+        </div>
+		
+        <div>
+          <button style="padding:0.5rem;">submit my details</button>
+		</div>
+		<br><br><br>
+		<div>
+			<input type="reset" style="padding:0.5rem;">
+		</div>
+		<br><br>
+		</section>
+      </form>
+    </body>
+  </html>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
